@@ -4,7 +4,7 @@ const axios = require('axios');
 module.exports = {
 	cooldown: 15,
 	data: new SlashCommandBuilder()
-		.setName('stats')
+		.setName('rstats')
 		.setDescription('Shows player stats')
 		.addStringOption(option =>
 			option
