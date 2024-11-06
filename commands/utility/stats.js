@@ -61,7 +61,7 @@ async function getPlayerStats(input) {
 		else if (steamCustomeUrlPattern.test(input)){
 			const customId = input.match(steamCustomeUrlPattern)[1];
 			const getingIdFromCustomId = await axios.get(`https://api.steampowered.com/ISteamUser/ResolveVanityURL/v1/?key=${apiKey}&vanityurl=${customId}`)
-			steamId = getingIdFromCustomId.data.response.steamId
+			steamId = getingIdFromCustomId.data.response.steamid
 		} else {
 			steamId = input;
 		}
