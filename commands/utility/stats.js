@@ -60,7 +60,9 @@ async function getPlayerStats(input) {
 		} 
 		else if (steamCustomeUrlPattern.test(input)){
 			const customId = input.match(steamCustomeUrlPattern)[1];
+			console.log(customId);
 			steamId = `https://api.steampowered.com/ISteamUser/ResolveVanityURL/v1/?key=${apiKey}&vanityurl=${customId}`
+			console.log(steamId);
 		} else {
 			steamId = input;
 		}
