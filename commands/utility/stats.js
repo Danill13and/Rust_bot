@@ -59,10 +59,9 @@ async function getPlayerStats(input) {
 			steamId = input.match(steamUrlPattern)[1];
 		} 
 		else if (steamCustomeUrlPattern.test(input)){
-			const customId = input.match(steamCustomeUrlPattern)[1];
-			console.log(customId);
-			steamId = `https://api.steampowered.com/ISteamUser/ResolveVanityURL/v1/?key=${apiKey}&vanityurl=${customId}`
-			console.log(steamId);
+			cconst customId = input.match(steamCustomeUrlPattern)[1];
+			getingIdFromCustomId = await axios.get(`https://api.steampowered.com/ISteamUser/ResolveVanityURL/v1/?key=${apiKey}&vanityurl=${customId}`)
+			steamId = getingIdFromCustomId.data.response.steamId
 		} else {
 			steamId = input;
 		}
