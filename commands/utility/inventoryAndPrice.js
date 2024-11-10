@@ -1,7 +1,7 @@
 const axios = require('axios');
 const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
 
-const apiKey = '21A670A05C4D46394B07629C7466C52C';
+const apiKey = process.env.apiKey;
 
 module.exports = {
     data: new SlashCommandBuilder()
