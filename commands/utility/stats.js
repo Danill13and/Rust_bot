@@ -49,7 +49,7 @@ module.exports = {
 
 async function getPlayerStats(input) {
 	try {
-		const apiKey = process.env.apiKey;;
+		const apiKey = process.env.apiKey;
 		const steamUrlPattern = /https?:\/\/steamcommunity\.com\/profiles\/(\d+)/;
 		const steamCustomeUrlPattern = /https?:\/\/steamcommunity\.com\/id\/(\d+)/;
 
