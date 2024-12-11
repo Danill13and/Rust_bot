@@ -29,9 +29,9 @@ module.exports = {
         // Создаем embed для профиля
         const statsEmbed = new EmbedBuilder()
             .setColor(0x00FFFF)
-            .setTitle(`Инвентарь ${nik || 'Игрока'}`)
+            .setTitle(`Інвентар ${nik || 'Гравця'}`)
             .setThumbnail(img || 'https://example.com/default-avatar.png')
-            .setDescription(`Общая стоимость инвентаря: **${totalPrice} UAH**`);
+            .setDescription(`Загальна вартість інвентарю: **${totalPrice} UAH**`);
 
         await interaction.editReply({ embeds: [statsEmbed] });
 
